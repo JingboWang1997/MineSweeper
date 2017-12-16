@@ -16,6 +16,7 @@
 	- java classes
 - /image
 
+
 ——FUNCTIONALITY——
 - classic mine sweeper functionality
 - left click to unopened cell to open
@@ -25,11 +26,13 @@
 - restart button to restart
 - if open a cell with bomb, game over
 
+
 ——RUN——
 - compile
   - javac -d out/production/mine_sweeper src/*.java
 - run
   - java -cp out/production/mine_sweeper GameRunner
+
 
 ——TO FIX——
 - left click on a number with wrong flags around should end the game
