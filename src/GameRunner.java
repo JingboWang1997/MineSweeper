@@ -26,20 +26,19 @@ public class GameRunner extends Application {
 
     @Override
     public void start(Stage primaryStage) {
-        gameStatus = true;
-        stage = primaryStage;
-        setUp(19, 30, 99);
-        gBoardUI = new GameGrid(gBoard);
+        gameStatus = true; //?
+        stage = primaryStage; //take the stage variable
+        setUp(19, 30, 99); // set up game board 19x30 with 99 bombs and button
+        gBoardUI = new GameGrid(gBoard); // init grid UI
         window.setCenter(gBoardUI);
         stage.setScene(new Scene(window));
         stage.show();
     }
 
     private void setUp(int rows, int cols, int bombNum) {
-        gBoard = new GameBoard(rows,cols,bombNum);
+        gBoard = new GameBoard(rows,cols,bombNum); //init a 2-d array
         restart = new Button("RESTART");
         restart.setOnMouseClicked(e -> {
-
             stage.setScene(new Scene(new StackPane(new ImageView(new Image("File:./image/loading.png")))));
             stage.show();
 

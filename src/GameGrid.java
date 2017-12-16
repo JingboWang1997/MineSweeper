@@ -10,6 +10,7 @@ public class GameGrid extends GridPane{
         super();
         for (int i = 0; i < gBoard.getRows(); i++) {
             for (int j = 0; j < gBoard.getCols(); j++) {
+                // put in each block image in the grid UI
                 ImageView view = gBoard.getBlock(i,j).getImage();
                 view.setFitHeight(30);
                 view.setPreserveRatio(true);

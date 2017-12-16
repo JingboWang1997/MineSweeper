@@ -15,7 +15,7 @@ public class GameBoard {
 		this.rows = rows;
 		this.cols = cols;
 		this.bombNum = bombNum;
-		grid = new Block[rows][cols];
+		grid = new Block[rows][cols]; //data structure representing the grid
 		bombPos = new HashSet<>();
 		rand = new Random();
 		initGameBoard();
@@ -24,12 +24,14 @@ public class GameBoard {
 
 	public void initGameBoard() {
 
+		// initialize every cell/Block
 		for (int i = 0; i < rows; i++) {
 			for (int j = 0; j < cols; j++) {
 				grid[i][j] = new Block(i,j);
 			}
 		}
 
+		// put bombNum bombs in the grid with distinct position
 		while (bombPos.size() < bombNum) {
 			int row = rand.nextInt(rows);
 			int col = rand.nextInt(cols);
@@ -38,6 +40,8 @@ public class GameBoard {
 			}
 		}
 
+		// give every block their adjacent list
+		// don't really need this, just count the number of bombs around a non-bomb block 
 		for (int i = 0; i < rows; i++) {
 			for (int j = 0; j < cols; j++) {
 				initAdjacencyList(grid[i][j], i, j);
@@ -46,6 +50,7 @@ public class GameBoard {
 	}
 
 	public void initAdjacencyList(Block current, int row, int col) {
+		//init the adjacent list
 		for (int i = row - 1; i < row + 2; i++) {
 			for (int j = col - 1; j < col + 2; j++) {
 				if ((i >= 0 && i < rows)
