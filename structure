@@ -1,9 +1,0 @@
-MineSweeper(JavaFX):
-
-GameBoard:
-    
-Block:
-  
-GameBoardUI extends Grid:
-
-BlockUI extends Stack:  

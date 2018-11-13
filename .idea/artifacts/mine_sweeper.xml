@@ -1,0 +1,13 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="mine_sweeper">
+    <output-path>$PROJECT_DIR$/out/artifacts/mine_sweeper</output-path>
+    <root id="archive" name="mine_sweeper.jar">
+      <element id="archive" name="mine_sweeper.jar">
+        <element id="module-output" name="mine_sweeper" />
+        <element id="directory" name="META-INF">
+          <element id="file-copy" path="$PROJECT_DIR$/META-INF/MANIFEST.MF" />
+        </element>
+      </element>
+    </root>
+  </artifact>
+</component>

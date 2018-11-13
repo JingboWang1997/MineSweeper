@@ -3,6 +3,14 @@
 ## a basic mine sweeper game
 
 ——STRUCTURE——
+- /.git
+- /.gradle
+- /.idea
+- /build
+	- /classes
+		- /java
+		 - /main
+	- /temp
 - /src
 	- Block.java
 		- block object class for each cell in the grid
@@ -35,8 +43,9 @@
 
 
 ——TO FIX——
+- update STRUCTURE
 - left click on a number with wrong flags around should end the game
 - user pick game grid
 - add timer
 - add a record of best score
-- add a picture to display on game over (win and lose)
+- add a picture and voice to display on game over (win and lose)
